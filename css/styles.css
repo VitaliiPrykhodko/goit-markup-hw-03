@@ -20,6 +20,7 @@ ul {
   --accent-color: #2196f3;
   --brc-color: #2f303a;
   --alt-brc-color: #f5f4fa;
+  --color-contact: rgba(255, 255, 255, 0.6);
 }
 
 a:hover,
@@ -47,9 +48,21 @@ body {
   color: var(--color-text-page);
 }
 
+.hidden-title {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
   outline: 1px solid red;
 }
 
@@ -58,6 +71,10 @@ body {
 }
 
 /* Header box */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header > .container {
   display: flex;
   align-items: center;
@@ -115,56 +132,44 @@ body {
 /* Hero box */
 .hero-section {
   background-color: var(--brc-color);
-  margin-bottom: 94px;
   text-align: center;
+  padding: 200px 0;
+  margin-bottom: 94px;
 }
 
 .hero-title {
+  max-width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--btn-color-text);
-  margin-bottom: 30px;
+  margin: 0 auto;
 }
 
 .hero-btn {
-  background-color: var(--alt-brc-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-style: none;
-  border-radius: 4px;
   font-weight: bold;
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--color-title);
-  margin-bottom: 200px;
+  background-color: var(--alt-brc-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-style: none;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 10px 32px;
   cursor: pointer;
 }
 
 /* Advantages box */
-.hidden-title {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-.advantage-section {
-  padding: 0 215px;
+.advantage-list {
+  display: flex;
   margin-bottom: 94px;
 }
 
-.advantage-list {
-  display: flex;
-}
-
-.advantage-item:not(:last-of-type) {
-  padding-right: 30px;
+.advantage-list > li:not(:first-child) {
+  margin-left: 30px;
 }
 
 .advantage-title {
@@ -182,10 +187,6 @@ body {
 }
 
 /* Portfolio box */
-.portfolio-section {
-  margin-bottom: 94px;
-}
-
 .title {
   font-size: 36px;
   line-height: 1.167;
@@ -196,32 +197,33 @@ body {
 
 .portfolio-list {
   display: flex;
-  justify-content: center;
+  margin-bottom: 94px;
 }
 
-.portfolio-list > li:not(:last-of-type) {
-  margin-right: 30px;
+.portfolio-list > li:not(:first-child) {
+  margin-left: 30px;
 }
 
 /* Team box */
 .team-section {
   background-color: var(--alt-brc-color);
-  padding: 94px 0;
 }
 
 .team-list {
   display: flex;
-  justify-content: center;
+  margin-left: -30px;
 }
 
-.team-list > li:not(:last-of-type) {
-  margin-right: 30px;
+.team-item {
+  flex-basis: calc(100% / 4);
+  margin-left: 30px;
 }
 
 .team-item {
   background-color: var(--btn-color-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -242,30 +244,23 @@ body {
 /* Footer box */
 .footer {
   background-color: var(--brc-color);
+  padding: 60px 0;
 }
 
 .logo-footer {
-  text-decoration: none;
+  display: inline-block;
   font-family: var(--font-logo);
   font-size: 26px;
   color: var(--accent-color);
-  display: block;
-  padding: 60px 1240px 20px 215px;
+  text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .logo-footer > span {
   color: var(--btn-color-text);
 }
 
-.address {
-  padding-left: 215px;
-  padding-bottom: 60px;
-}
-
-.footer-list {
-}
-
-.footer-list > li:not(:last-of-type) {
+.footer-list > li:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -281,14 +276,14 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-contact);
 }
 
 /* Portfolio Page Style */
 /* Filter box */
 .filter-section {
   margin-top: 94px;
-  margin-bottom: 50px;
+  margin-bottom: 34px;
 }
 
 .filter-list {
@@ -296,11 +291,13 @@ body {
   justify-content: center;
 }
 
-.filter-list > li:not(:last-of-type) {
-  margin-right: 8px;
+.filter-list > li:not(:first-child) {
+  margin-left: 8px;
 }
 
 /* Buttons box */
+.btn {
+}
 .text-btn {
   font-family: Roboto;
   font-weight: 500;
