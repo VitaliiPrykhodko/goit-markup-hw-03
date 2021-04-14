@@ -1,15 +1,9 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
@@ -53,14 +47,26 @@ body {
   color: var(--color-text-page);
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
+.section {
+  padding: 94px 0;
+}
+
 /* Header box */
-.header {
+.header > .container {
   display: flex;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo {
-  margin: 24px 93px 25px 215px;
+  margin-right: 93px;
   text-decoration: none;
   font-family: var(--font-logo);
   font-size: 26px;
@@ -75,11 +81,11 @@ body {
   display: flex;
 }
 
-.item-nav:not(:last-of-type) {
-  padding-right: 50px;
+.nav-list > .item-nav:not(:first-child) {
+  margin-left: 50px;
 }
 
-.nav-list .text-link-nav.current {
+.text-link-nav.current {
   color: var(--accent-color);
 }
 
@@ -95,12 +101,11 @@ body {
 
 .list-contact-head {
   display: flex;
-  margin-left: 331px;
-  margin-right: 215px;
+  margin-left: auto;
 }
 
-.item-contact-head:not(:last-of-type) {
-  padding-right: 50px;
+.list-contact-head > .item-contact-head:not(:first-child) {
+  margin-left: 50px;
 }
 
 .text-contact-head {
@@ -108,9 +113,8 @@ body {
 }
 
 /* Hero box */
-.hero {
+.hero-section {
   background-color: var(--brc-color);
-  padding: 200px 452px 0 452px;
   margin-bottom: 94px;
   text-align: center;
 }
