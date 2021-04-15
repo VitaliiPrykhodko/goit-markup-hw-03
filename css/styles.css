@@ -133,7 +133,6 @@ body {
   background-color: var(--brc-color);
   text-align: center;
   padding: 200px 0;
-  margin-bottom: 94px;
 }
 
 .hero-title {
@@ -164,7 +163,6 @@ body {
 /* Advantages box */
 .advantage-list {
   display: flex;
-  margin-bottom: 94px;
 }
 
 .advantage-list > li:not(:first-child) {
@@ -186,6 +184,10 @@ body {
 }
 
 /* Portfolio box */
+.section-portfolio {
+  padding-bottom: 94px;
+}
+
 .title {
   font-size: 36px;
   line-height: 1.167;
@@ -196,7 +198,6 @@ body {
 
 .portfolio-list {
   display: flex;
-  margin-bottom: 94px;
 }
 
 .portfolio-list > li:not(:first-child) {
@@ -280,14 +281,11 @@ body {
 
 /* Portfolio Page Css */
 
-.gallery-section {
-  margin: 94px 0;
-}
 /* Filter box */
 .filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-list > li:not(:first-child) {
